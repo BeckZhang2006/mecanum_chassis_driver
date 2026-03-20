@@ -1,0 +1,12 @@
+mecanum_chassis_driver:
+  ros__parameters:
+    port: '/dev/ttyUSB0'           # 串口设备
+    baudrate: 115200               # 波特率（根据文档）
+    wheel_diameter: 0.067          # 轮子直径67mm（文档默认值）
+    wheel_base: 0.15               # 半轮距（左右轮间距的一半，单位米）
+    axle_base: 0.15                # 半轴距（前后轮间距的一半，单位米）
+    encoder_resolution: 1560       # 编码器分辨率（需根据电机减速比调整）
+    control_rate: 50.0             # 控制频率Hz
+    odom_rate: 50.0                # 里程计发布频率
+    speed_scale: 1.0               # 速度比例：1000指令值对应1.0m/s
+    upload_encoder: true           # 开启编码器数据自动上报
